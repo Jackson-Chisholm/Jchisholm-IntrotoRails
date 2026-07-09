@@ -27,7 +27,7 @@ for a in 1...200 do
   newP = Person.new
   newP.name = Faker::Name.name
   newP.said_at = Faker::Date.between(from: 2.days.ago, to: Date.today)
-  newP.quote = Quote.find_by(id: Faker::Number.between(from: 1, to: 5))
+  newP.quote = Quote.find_by(id: Faker::Number.between(from: 16, to: 20))
   newP.save
 end
 
