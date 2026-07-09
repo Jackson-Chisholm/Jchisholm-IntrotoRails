@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_07_08_200209) do
+ActiveRecord::Schema[8.1].define(version: 2026_07_09_024143) do
   create_table "people", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
+    t.integer "quote_id", null: false
     t.date "said_at"
     t.datetime "updated_at", null: false
+    t.index ["quote_id"], name: "index_people_on_quote_id"
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -24,4 +26,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_07_08_200209) do
     t.string "saying"
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "people", "quotes"
 end
