@@ -7,8 +7,8 @@
   <% @people.each do |person| %>
     <div>
         <p>Person: <%= person.name %></p>
-        <% quote = product.quote %>
-        <p>Said: <%= quote.quote %></p>
+        <% quote = person.quote %>
+        <p>Said: <%= quote.saying %></p>
         <p>At: <%= person.said_at %></p>
     </div>
     <br />
