@@ -1,0 +1,16 @@
+<h1>Which Person Quoted what in Stranger Things</h1>
+
+<h2>This database uses two main sources, one being for the people. This is just generated via Faker. The other relies on the stranger things quote API. The quotes are generated first, and then the peopl get randomly assigned a quote via a random id.</h2>
+<h2>Here is all of the people</h2>
+
+<div id="products">
+  <% @people.each do |person| %>
+    <div>
+        <p>Person: <%= person.name %></p>
+        <% quote = person.quote %>
+        <p>Said: <%= quote.saying %></p>
+        <p>At: <%= person.said_at %></p>
+    </div>
+    <br />
+  <% end %>
+</div>
