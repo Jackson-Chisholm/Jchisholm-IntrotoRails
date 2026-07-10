@@ -1,6 +1,10 @@
 <h1>Which Person Quoted what in Stranger Things</h1>
 <h2><a href = "/people/index">About</a></h2> <h2><a href = "/people/all">All People</a></h2>
 
+<div style="font-size: 2rem;">
+  <%= paginate @people %>
+</div>
+
 <div id="products">
   <% @people.each do |person| %>
     <div>
