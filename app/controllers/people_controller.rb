@@ -12,6 +12,5 @@ class PeopleController < ApplicationController
   end
 
   def view
-    @people = Person.find(params[:id])
   end
 end
