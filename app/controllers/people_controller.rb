@@ -8,7 +8,7 @@ class PeopleController < ApplicationController
   end
 
   def show
-    @people = Person.includes(:quote).all.page(params[:page])
+    @people = Person.includes(:quote).all
   end
 
   def view
