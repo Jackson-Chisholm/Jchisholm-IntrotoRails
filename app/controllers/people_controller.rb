@@ -11,7 +11,7 @@ class PeopleController < ApplicationController
     @people = Person.includes(:quote).all
   end
 
-  def spef
+  def view
     @people = Person.find(params[:id])
   end
 end

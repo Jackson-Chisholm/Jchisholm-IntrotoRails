@@ -1,0 +1,14 @@
+<h1>Which Person Quoted what in Stranger Things</h1>
+<h2><a href = "/people/index">About</a></h2> <h2><a href = "/people/all">All People</a></h2>
+
+<div id="products">
+  <% @people.each do |person| %>
+    <div>
+        <h3>Person: <%= person.name %></h3>
+        <% quote = person.quote %>
+        <h3>Said: <%= quote.saying %></h3>
+        <h4>At: <%= person.said_at %></h4>
+    </div>
+    <br />
+  <% end %>
+</div>
