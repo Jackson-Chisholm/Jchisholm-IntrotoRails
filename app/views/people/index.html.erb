@@ -6,7 +6,13 @@
 <p>The people within the database are generated via Faker</p>
 <p>Stranger Things Quotes is used as the base for generating the quotes the people will say</p>
 <p>Once the quotes are generated, then people are generated using Faker and given one of the quotes</p>
-<h2>See one of the Results Here</h2>
+<h2>Search for people here!</h2>
+<%= form_with url: people_path, method: :get do |form| %>
+  <%= form.label :query, "Search for a Name:" %>
+  <%= form.search_field :query %>
+  <%= form.submit "Search" %>
+<% end %>
+<h2>See Results Here</h2>
 
 <div id="products">
   <% @people.each do |person| %>
